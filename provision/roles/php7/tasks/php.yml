@@ -29,7 +29,7 @@
 
 - name: Conf php7 xdebug 2
   become: yes
-  lineinfile: dest=/etc/php/7.0/fpm/conf.d/20-xdebug.ini line="xdebug.remote_port=9010"
+  lineinfile: dest=/etc/php/7.0/fpm/conf.d/20-xdebug.ini line="xdebug.remote_port=9000"
   when: php_dev
   
 - name: Conf php7 xdebug 3

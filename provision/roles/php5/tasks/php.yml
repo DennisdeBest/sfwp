@@ -30,27 +30,27 @@
 
 - name: Conf php5 xdebug 1
   become: yes
-  lineinfile: dest=/etc/php5/conf.d/20-xdebug.ini line="xdebug.remote_enable=true"
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini line="xdebug.remote_enable=true"
   when: php_dev
 
 - name: Conf php5 xdebug 2
   become: yes
-  lineinfile: dest=/etc/php5/conf.d/20-xdebug.ini line="xdebug.remote_port=9000"
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini line="xdebug.remote_port=9000"
   when: php_dev
   
 - name: Conf php5 xdebug 3
   become: yes
-  lineinfile: dest=/etc/php5/conf.d/20-xdebug.ini line="xdebug.remote_host=10.0.0.1"
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini line="xdebug.remote_host=10.0.0.1"
   when: php_dev
 
 - name: Conf php5 xdebug 4
   become: yes
-  lineinfile: dest=/etc/php5/conf.d/20-xdebug.ini line="xdebug.idekey="PHPSTORM""
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini line="xdebug.idekey="PHPSTORM""
   when: php_dev
 
 - name: Conf php5 xdebug 5
   become: yes
-  lineinfile: dest=/etc/php5/conf.d/20-xdebug.ini line="xdebug.max_nesting_level=250"
+  lineinfile: dest=/etc/php5/mods-available/xdebug.ini line="xdebug.max_nesting_level=250"
   when: php_dev
 
 

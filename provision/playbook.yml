@@ -9,7 +9,7 @@
       users:
         - username: vagrant
     - mysql
-    - role: php5
+    - role: php7
       php_dev: yes
     - role: apache2
       become: yes
