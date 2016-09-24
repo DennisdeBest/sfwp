@@ -1,7 +1,8 @@
-<h1>AppBundle</h1>
+<h1>South West France Pools</h1>
 <hr>
+{% set route = app.request.attributes.get('_route') %}
 <ul>
-    <li><a href="{{ path('homepage') }}">Home</a></li>
-    <li><a href="{{ path('about') }}">About</a></li>
-    <li><a href="{{ path('contact') }}">Contact</a></li>
+    <li {{ route == 'homepage' ? 'class="active"' }}><a href="{{ path('homepage') }}">Home</a></li>
+    <li {{ route == 'about' ? 'class="active"' }}><a href="{{ path('about') }}">About</a></li>
+    <li {{ route == 'contact' ? 'class="active"' }}><a href="{{ path('contact') }}">Contact</a></li>
 </ul>

@@ -1,3 +1,7 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 menu ul {
     list-style: none;
     width: 100%;
@@ -5,6 +9,7 @@ menu ul {
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 5px 0px;
+    color: #0d6aad;
 }
 
 menu ul li {
@@ -12,8 +17,29 @@ menu ul li {
     list-style: none;
     margin: auto;
 }
+menu ul li a {
+    color: #0d6aad;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+menu ul li a:hover {
+    color: #00a7d0;
+}
 menu {
     width: 100%;
+}
+
+menu li.active a {
+    color:#00a7d0 !important;
+    font-style: italic;
+}
+
+menu hr {
+    border: 0;
+    height: 1px;
+    background: #0d6aad;
+    background-image: linear-gradient(to right, #ccc, #0d6aad, #ccc);
 }
 #pageContainer {
     max-width: 800px;
