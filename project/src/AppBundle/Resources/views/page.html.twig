@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{%  block title %}Stichting Nepal - {% endblock %}</title>
+    {% block stylesheets %}
+        {% stylesheets filter='cssrewrite'
+        'bundles/app/css/main.css'
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        <link href='https://fonts.googleapis.com/css?family=Raleway|Ubuntu' rel='stylesheet' type='text/css'>
+        {% endstylesheets %}
+    {%  endblock stylesheets %}
+    {% block javascript %}
+        <script
+                src="https://code.jquery.com/jquery-2.2.3.min.js"
+                integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+                crossorigin="anonymous"></script>
+        {% javascripts
+        'bundles/app/js/main.js'
+        output='js/compiled/app.js' %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+</head>
+<body>
+<div id="userBanner" class="top">
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <span id="username">{{ app.user.username }}</span>
+        <span class="userButton button"> <a href="{{ path('fos_user_security_logout') }}">
+                    Logout </a></span>
+    {% endif %}
+</div>
+<div id="pageContainer">
+    <menu>
+        {% embed "AppBundle::menu.html.twig" %}
+        {% endembed %}
+    </menu>
+
+    </div>
+
+    <div id="content">
+        {% block content %}
+            {% block fos_content %}
+                {% block fos_user_content %}{% endblock %}
+            {% endblock %}
+        {% endblock %}
+    </div>
+
+</div>
+<footer>
+</footer>
+
+
+
+</body>
+
+</html>
