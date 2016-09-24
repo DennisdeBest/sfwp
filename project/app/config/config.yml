@@ -66,3 +66,21 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+
+vich_uploader:
+    db_driver: orm
+
+ivory_ck_editor:
+    configs:
+        base_config:
+            toolbar: full
+
+jms_i18n_routing:
+    default_locale: en
+    locales: [en, fr, nl]
+    strategy: prefix_except_default
