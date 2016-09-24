@@ -1,0 +1,6 @@
+packages:
+  - vim
+  - curl
+  - wget
+composer_path: /usr/bin/composer
+composer_keep_updated: true
