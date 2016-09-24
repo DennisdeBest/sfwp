@@ -8,11 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    /**
-     * @Route("/", name="homepage")
-     */
     public function indexAction()
     {
         return $this->render('AppBundle::home.html.twig');
+    }
+
+    public function aboutAction()
+    {
+        return $this->render('AppBundle::about.html.twig');
+    }
+
+    public function contactAction() {
+        return $this->render('AppBundle::contact.html.twig');
     }
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{%  block title %}Stichting Nepal - {% endblock %}</title>
+    <title>{%  block title %}AppBundle - {% endblock %}</title>
     {% block stylesheets %}
         {% stylesheets filter='cssrewrite'
         'bundles/app/css/main.css'
@@ -36,8 +36,6 @@
         {% embed "AppBundle::menu.html.twig" %}
         {% endembed %}
     </menu>
-
-    </div>
 
     <div id="content">
         {% block content %}

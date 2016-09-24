@@ -1,10 +1,24 @@
 menu ul {
-    display: inline;
     list-style: none;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 5px 0px;
 }
 
 menu ul li {
     display: inline;
     list-style: none;
     margin: auto;
+}
+menu {
+    width: 100%;
+}
+#pageContainer {
+    max-width: 800px;
+    margin: auto;
+}
+#userBanner {
+    position: absolute;
 }
