@@ -4,4 +4,21 @@
 {% endblock %}
 {% block content %}
 <h1>Home</h1>
+    <p>Lorem ipsum dolor sit amet, aliquip definitiones te vis, eos elit aliquip contentiones ea. Omnesque laboramus ut quo, ne graeci constituam pri, vel ei enim debet invidunt. Maiorum accumsan repudiare ut quo, pri ad praesent repudiandae, an malis vidisse mei. In vis populo maiestatis mnesarchum. Utinam mentitum menandri has ei, vel perfecto petentium suscipiantur id. Pro ei quodsi docendi.
+    </p>
+    <p>
+        Ut sed tollit detraxit, vim at oblique urbanitas. Ut alterum percipit pri. Nam eu paulo discere scripserit, vis suscipit oportere iracundia cu. Ex mei regione quaestio persequeris.
+    </p>
+<div id="imageContainer">
+    {% image '@AppBundle/Resources/public/img/pool_1.jpg' %}
+    <img src="{{ asset_url }}" />
+    {% endimage %}
+    {% image '@AppBundle/Resources/public/img/pool_2.jpg' %}
+    <img src="{{ asset_url }}" />
+    {% endimage %}
+    {% image '@AppBundle/Resources/public/img/pool_3.jpg' %}
+    <img src="{{ asset_url }}" />
+    {% endimage %}
+</div>
+
 {% endblock %}

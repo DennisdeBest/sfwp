@@ -48,3 +48,18 @@ menu hr {
 #userBanner {
     position: absolute;
 }
+
+#imageContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#imageContainer img {
+    width: 30%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 5000px;
+    min-width: 200px;
+    border: 1px solid #0d6aad;
+    box-shadow: 7px 7px 5px #A0C4D0;
+}
