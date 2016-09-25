@@ -96,3 +96,8 @@ h1.title {
     width: 72px;
     display: inline;
 }
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+}
