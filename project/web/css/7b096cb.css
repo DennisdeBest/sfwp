@@ -50,12 +50,12 @@ hr {
     position: absolute;
 }
 
-#imageContainer {
+#homePageContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
-#imageContainer img {
+#homePageContainer img {
     width: 30%;
     height: auto;
     box-sizing: border-box;
@@ -63,6 +63,10 @@ hr {
     min-width: 200px;
     border: 1px solid #0d6aad;
     box-shadow: 7px 7px 5px #A0C4D0;
+}
+#homePageContainer .homePageElement {
+    width: 30%;
+    min-width: 200px;
 }
 .showcaseImagesContainer img {
     width: 30%;

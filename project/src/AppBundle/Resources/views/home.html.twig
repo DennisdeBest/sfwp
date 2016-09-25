@@ -3,22 +3,29 @@
     {{ parent() }}Home
 {% endblock %}
 {% block content %}
-<h1>Home</h1>
-    <p>Lorem ipsum dolor sit amet, aliquip definitiones te vis, eos elit aliquip contentiones ea. Omnesque laboramus ut quo, ne graeci constituam pri, vel ei enim debet invidunt. Maiorum accumsan repudiare ut quo, pri ad praesent repudiandae, an malis vidisse mei. In vis populo maiestatis mnesarchum. Utinam mentitum menandri has ei, vel perfecto petentium suscipiantur id. Pro ei quodsi docendi.
-    </p>
-    <p>
-        Ut sed tollit detraxit, vim at oblique urbanitas. Ut alterum percipit pri. Nam eu paulo discere scripserit, vis suscipit oportere iracundia cu. Ex mei regione quaestio persequeris.
-    </p>
-<div id="imageContainer">
+<div id="homePageContainer">
+    <div class="homePageElement">
     {% image '@AppBundle/Resources/public/img/pool_1.jpg' %}
     <img src="{{ asset_url }}" />
     {% endimage %}
+        <h3><a href="{{ path('about') }}">About us</a></h3>
+        <strong>South West France Pools</strong>
+        specializes in the construction of swimming pools, spas, rockscapes and waterfeatures...
+    </div>
+    <div class="homePageElement">
     {% image '@AppBundle/Resources/public/img/pool_2.jpg' %}
     <img src="{{ asset_url }}" />
     {% endimage %}
+        <h3><a href="{{ path('showcase') }}">Showcase</a></h3>
+        Covering a great deal of the west of France here are some of our completed projects.
+    </div>
+    <div class="homePageElement">
     {% image '@AppBundle/Resources/public/img/pool_3.jpg' %}
     <img src="{{ asset_url }}" />
     {% endimage %}
+        <h3><a href="{{ path('contact') }}">Contact us</a></h3>
+        Contact us for a free quotation and any advice you may need.
+    </div>
 </div>
 
 {% endblock %}
