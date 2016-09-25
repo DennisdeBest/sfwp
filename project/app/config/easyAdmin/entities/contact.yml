@@ -1,0 +1,10 @@
+easy_admin:
+    entities:
+        Contact:
+            class: AppBundle\Entity\Contact
+            label: 'Contact'
+            disabled_actions: ['new']
+            form:
+                fields: ['senddate', 'name', 'email', 'message']
+            list:
+                actions: ['delete', 'show', '-edit']

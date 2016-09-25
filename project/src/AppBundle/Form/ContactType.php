@@ -22,7 +22,6 @@ class ContactType extends AbstractType
             ->add('name', TextType::class)
             ->add('email', EmailType::class)
             ->add('message', TextType::class)
-            ->add('senddate', DateTimeType::class)
             ->add('send', SubmitType::class)
         ;
     }

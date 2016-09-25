@@ -25,12 +25,13 @@ class DefaultController extends Controller
         $form = $this->createForm(ContactType::class, $contact);
 
         if($request->isMethod('POST') && $form->handleRequest($request)->isValid()){
+            $contact->setSenddate(new \DateTime());
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
             $em->flush();
         }
 
-        return $this->render('AppBundle::contact.html.twig', array('form' =>$form));
+        return $this->render('AppBundle::contact.html.twig', array('form' =>$form->createView()));
     }
 
     public function showcaseAction() {
@@ -38,4 +39,6 @@ class DefaultController extends Controller
         $showcases = $repo->findAll();
         return $this->render('AppBundle::showcase.html.twig', array('showcases'=>$showcases));
     }
+
+
 }
