@@ -6,7 +6,7 @@
 <div id="homePageContainer">
     <div class="homePageElement">
     {% image '@AppBundle/Resources/public/img/pool_1.jpg' %}
-    <img src="{{ asset_url }}" />
+        <a href="{{ path('about') }}"><img src="{{ asset_url }}" /></a>
     {% endimage %}
         <h3><a href="{{ path('about') }}">About us</a></h3>
         <strong>South West France Pools</strong>
@@ -14,14 +14,14 @@
     </div>
     <div class="homePageElement">
     {% image '@AppBundle/Resources/public/img/pool_2.jpg' %}
-    <img src="{{ asset_url }}" />
+        <a href="{{ path('showcase') }}"><img src="{{ asset_url }}" /></a>
     {% endimage %}
         <h3><a href="{{ path('showcase') }}">Showcase</a></h3>
         Covering a great deal of the west of France here are some of our completed projects.
     </div>
     <div class="homePageElement">
     {% image '@AppBundle/Resources/public/img/pool_3.jpg' %}
-    <img src="{{ asset_url }}" />
+        <a href="{{ path('contact') }}"><img src="{{ asset_url }}" /></a>
     {% endimage %}
         <h3><a href="{{ path('contact') }}">Contact us</a></h3>
         Contact us for a free quotation and any advice you may need.
