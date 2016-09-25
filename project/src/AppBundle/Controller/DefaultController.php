@@ -29,6 +29,25 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
             $em->flush();
+
+            $email = \Swift_Message::newInstance()
+                ->setSubject("Message From : ".$contact->getName())
+                ->setFrom($contact->getEmail())
+                ->setTo('southwestfrancepools@gmail.com')
+                ->setContentType("text/html")
+                ->setBody(
+                    $this->renderView(
+                        'AppBundle:email:contact.html.twig',
+                        array('contact'=>$contact)
+                    )
+                );
+
+            if(!$this->get('mailer')->send($email)){
+                $this->addFlash("email_fail", "Failed to send email message");
+            }
+            else {
+                $this->addFlash("email_success", "Email sent !");
+            }
         }
 
         return $this->render('AppBundle::contact.html.twig', array('form' =>$form->createView()));

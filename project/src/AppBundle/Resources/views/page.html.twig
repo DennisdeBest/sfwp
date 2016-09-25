@@ -6,9 +6,11 @@
     {% block stylesheets %}
         {% stylesheets filter='cssrewrite'
         'bundles/app/css/main.css'
+        'bundles/app/css/bootstrap.css'
         %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
         <link href='https://fonts.googleapis.com/css?family=Raleway|Ubuntu|Copse' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         {% endstylesheets %}
     {%  endblock stylesheets %}
     {% block javascript %}
@@ -16,6 +18,7 @@
                 src="https://code.jquery.com/jquery-2.2.3.min.js"
                 integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
                 crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         {% javascripts
         'bundles/app/js/main.js'
         output='js/compiled/app.js' %}
