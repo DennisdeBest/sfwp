@@ -1,4 +1,7 @@
-<h1>South West France Pools</h1>
+
+<h1 class="title">{% image '@AppBundle/Resources/public/img/logo.png' %}
+    <img class="logo" src="{{ asset_url }}" />
+    {% endimage %}South West France Pools</h1>
 <hr>
 {% set route = app.request.attributes.get('_route') %}
 <ul>
