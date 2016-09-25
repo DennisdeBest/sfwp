@@ -1,0 +1,11 @@
+easy_admin:
+    entities:
+        Showcase:
+            class: AppBundle\Entity\Showcase
+            label: 'Showcase'
+            form:
+                fields:
+                    - name
+                    - { property: 'images', type: 'collection', type_options: { entry_type: 'AppBundle\Form\ImageType' }}
+            list:
+                fields: ['id', 'name','images']

@@ -1,0 +1,20 @@
+{% extends 'AppBundle::page.html.twig' %}
+{% block title %}
+    {{ parent() }}Showcase
+{% endblock %}
+{% block content %}
+    <h1>Showcase</h1>
+    {% for showcase in showcases %}
+        {% if showcase and showcase.images %}
+            <h2>{{ showcase.name }}</h2>
+            <div class="showcaseImagesContainer">
+            {% for image in showcase.images %}
+                <img class="showcaseImageSmall"
+                     src="/uploads/showcase/{{ image.image }}"
+                />
+            {% endfor %}
+            </div>
+            <hr>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

@@ -9,3 +9,8 @@ about:
 contact:
     path:     /contact
     defaults: { _controller: AppBundle:Default:contact }
+
+
+showcase:
+    path:     /showcase
+    defaults: { _controller: AppBundle:Default:showcase }

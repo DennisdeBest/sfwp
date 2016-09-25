@@ -16,6 +16,6 @@
       apache_vhosts:
         # Additional optional properties: 'serveradmin, serveralias, extra_parameters'.
         - servername: "swfp.local"
-          documentroot: "/var/www/swfp.local"
+          documentroot: "/var/www/swfp.local/web"
     - common
 ...

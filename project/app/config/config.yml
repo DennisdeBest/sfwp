@@ -8,6 +8,7 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    appbundle.showcase_images: /uploads/showcase
 
 framework:
     #esi:             ~
@@ -81,6 +82,10 @@ assetic:
 
 vich_uploader:
     db_driver: orm
+    mappings:
+        showcase_images:
+            uri_prefix: %appbundle.showcase_images%
+            upload_destination: %kernel.root_dir%/../web/uploads/showcase
 
 ivory_ck_editor:
     configs:
