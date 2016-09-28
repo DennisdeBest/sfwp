@@ -67,6 +67,7 @@ hr {
 #homePageContainer .homePageElement {
     width: 30%;
     min-width: 200px;
+    margin-bottom: 20px;
 }
 .showcaseImagesContainer img {
     width: 30%;
