@@ -70,6 +70,7 @@ hr {
 }
 .showcaseImagesContainer img {
     width: 30%;
+    height: 1%;
     margin: 5px;
     min-width: 200px;
     box-sizing: border-box;
@@ -83,6 +84,7 @@ hr {
     flex-flow: row wrap;
     justify-content: space-around;
     width: 100%;
+    align-items: center;
 }
 h1 {
     text-align: center;
